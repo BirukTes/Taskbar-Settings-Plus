@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TS+ Configurator (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TS+ Configurator (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

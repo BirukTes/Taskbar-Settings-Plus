@@ -1,0 +1,20 @@
+﻿<Application
+    x:Class="TS__Configurator.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TS__Configurator"
+     xmlns:media="using:Microsoft.UI.Xaml.Media">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <media:AcrylicBrush x:Key="CustomAcrylicInAppLuminosity"
+            TintOpacity="0.8" TintLuminosityOpacity="0.8" TintColor="Blue"/>
+            <!-- Other app resources here -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
