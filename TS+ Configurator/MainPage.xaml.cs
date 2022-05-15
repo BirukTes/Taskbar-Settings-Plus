@@ -27,22 +27,6 @@ namespace TS__Configurator
         public MainPage()
         {
             this.InitializeComponent();
-
-            //if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("M.UI.Xaml.Media.AcrylicBrush"))
-            //{
-                Microsoft.UI.Xaml.Media.AcrylicBrush myBrush = new Microsoft.UI.Xaml.Media.AcrylicBrush();
-                myBrush.TintColor = Color.FromArgb(255, 202, 24, 37);
-                myBrush.FallbackColor = Color.FromArgb(255, 202, 24, 37);
-                myBrush.TintOpacity = 0.6;
-
-                grid.Background = myBrush;
-            //}
-            //else
-            //{
-            //    SolidColorBrush myBrush = new SolidColorBrush(Color.FromArgb(255, 202, 24, 37));
-
-            //    grid.Fill = myBrush;
-            //}
         }
 
 
