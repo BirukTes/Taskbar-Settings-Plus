@@ -9,11 +9,10 @@
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->
-
             </ResourceDictionary.MergedDictionaries>
 
             <media:AcrylicBrush x:Key="CustomAcrylicInAppLuminosity"
-            TintOpacity="0.8" TintLuminosityOpacity="0.8" TintColor="Blue"/>
+            TintOpacity="0.2" TintLuminosityOpacity="0" TintColor="Black"/>
             <!-- Other app resources here -->
         </ResourceDictionary>
     </Application.Resources>

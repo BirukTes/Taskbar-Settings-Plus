@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <NavigationView x:Name="nvSample" IsSettingsVisible="False">
+        <NavigationView.Resources>
+            <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground" BackgroundSource="HostBackdrop" TintColor="#FF3333FF" TintOpacity="0.6" FallbackColor="#FF3333FF" />
+            <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground" BackgroundSource="Backdrop" TintColor="#FF3333FF" TintOpacity="0.6" FallbackColor="#FF3333FF" />
+        </NavigationView.Resources>
         <NavigationView.MenuItems>
             <NavigationViewItem Content="Menu Item1" Tag="SamplePage1">
                 <NavigationViewItem.Icon>

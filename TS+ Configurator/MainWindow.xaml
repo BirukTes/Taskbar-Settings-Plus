@@ -5,18 +5,41 @@
     xmlns:local="using:TS__Configurator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    >
-    <NavigationView x:Name="nvSample">
-        <NavigationView.MenuItems>
-            <NavigationViewItem Content="Menu Item1" Tag="SamplePage1">
-                <NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/FluentIcons/FluentIconsSettings.png"
-                                    ShowAsMonochrome="False" />
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
-        </NavigationView.MenuItems>
-        <Frame x:Name="contentFrame"/>
-    </NavigationView>
+    mc:Ignorable="d">
 
+    <Grid x:Name="gr">
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/Images/wallpaper-murals-modern-wallpaper.jpg" Stretch="Fill"/>
+            <!--<SolidColorBrush Color="LightSlateGray" Opacity="0.2"/>-->
+        </Grid.Background>
+        <NavigationView x:Name="NavView" IsSettingsVisible="False" 
+                        IsTitleBarAutoPaddingEnabled="True"
+                        IsBackEnabled="False"
+                        IsBackButtonVisible="Collapsed"
+                        Background="{ThemeResource SystemControlBaseHighAcrylicWindowBrush}"
+                        IsPaneOpen="False"
+                        >
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="GeneralView" Content="General" Tag="GeneralView">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/FluentIcons/FluentIconsSettings.png"
+                                    ShowAsMonochrome="False" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.PaneFooter>
+                <NavigationViewItem Content="About">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/FluentIcons/icons8-info-100.png"
+                                    ShowAsMonochrome="False" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.PaneFooter>
+            <Frame x:Name="contentFrame">
+                <StackPanel>
+                    <local:MainPage/>
+                </StackPanel>
+            </Frame>
+        </NavigationView>
+    </Grid>
 </Window>

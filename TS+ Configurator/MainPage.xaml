@@ -10,18 +10,21 @@
     <!--<Page.Background>
         <AcrylicBrush TintOpacity="0.8" TintLuminosityOpacity="0.8" TintColor="Black" FallbackColor="SkyBlue">
         </AcrylicBrush>
-    </Page.Background>--> 
-    
+    </Page.Background>-->
 
-    
+
+
     <Grid x:Name="grid">
-        
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="myButton" Click="myButton_Click">Click</Button>
-            <Button x:Name="myButton1" >Click 1</Button>
-        </StackPanel>
-        <Rectangle Height="30"  Width="200" Fill="{ThemeResource CustomAcrylicInAppLuminosity}" />
 
-     
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="myButton" Click="myButton_Click" >
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="Offset ToolTip." VerticalOffset="-80" Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"/>
+                </ToolTipService.ToolTip>
+
+                Click
+            </Button>
+            <Button x:Name="myButton1" ToolTipService.ToolTip="adfasd">Click 1</Button>
+        </StackPanel>
     </Grid>
 </Page>
