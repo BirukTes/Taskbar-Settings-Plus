@@ -1,4 +1,5 @@
 ﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Imaging;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -16,6 +17,27 @@ namespace TS__Configurator
         {
             this.InitializeComponent();
             NavView.SelectedItem = GeneralView;
+        }
+
+        private void NavView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
+        {
+            try
+            {
+                var item = (NavigationViewItem)args.SelectedItem;
+                switch (item.Tag)
+                {
+                    case "MainPage":
+                        contentFrame.Content = new MainPage();
+                        break;
+                    case "AboutPage":
+                        contentFrame.Content = new AboutPage();
+                        break;
+                }
+            }
+            catch (System.Exception)
+            {
+                contentFrame.Content = "Error. Nothing to display.";
+            }
         }
     }
 }

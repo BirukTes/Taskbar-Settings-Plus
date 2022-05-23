@@ -16,30 +16,26 @@
                         IsTitleBarAutoPaddingEnabled="True"
                         IsBackEnabled="False"
                         IsBackButtonVisible="Collapsed"
-                        Background="{ThemeResource SystemControlBaseHighAcrylicWindowBrush}"
-                        IsPaneOpen="False"
-                        >
+                        Background="{ThemeResource AcrylicInAppFillColorDefaultBrush}"
+                        IsPaneOpen="False" 
+                        SelectionChanged="NavView_SelectionChanged" >
             <NavigationView.MenuItems>
-                <NavigationViewItem x:Name="GeneralView" Content="General" Tag="GeneralView">
+                <NavigationViewItem x:Name="GeneralView" Content="General" Tag="MainPage">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="ms-appx:///Assets/FluentIcons/FluentIconsSettings.png"
                                     ShowAsMonochrome="False" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-            <NavigationView.PaneFooter>
-                <NavigationViewItem Content="About">
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Content="About" Tag="AboutPage">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="ms-appx:///Assets/FluentIcons/icons8-info-100.png"
                                     ShowAsMonochrome="False" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-            </NavigationView.PaneFooter>
-            <Frame x:Name="contentFrame">
-                <StackPanel>
-                    <local:MainPage/>
-                </StackPanel>
-            </Frame>
+            </NavigationView.FooterMenuItems>
+            <Frame x:Name="contentFrame"/>
         </NavigationView>
     </Grid>
 </Window>

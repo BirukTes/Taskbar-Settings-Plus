@@ -12,6 +12,7 @@
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="AboutPage.xaml" />
     <None Remove="MainPage.xaml" />
   </ItemGroup>
 
@@ -45,5 +46,10 @@
   <ItemGroup>
     <Folder Include="Assets\Images\" />
     <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
